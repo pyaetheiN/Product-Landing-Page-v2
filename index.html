@@ -18,22 +18,22 @@
           <!-- ===== nav-list ===== -->
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#" class="nav__link">Home</a>
+              <a href="#home" class="nav__link">Home</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Features</a>
+              <a href="#features" class="nav__link">Features</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Pricing</a>
+              <a href="#pricing" class="nav__link">Pricing</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">FAQ</a>
+              <a href="#faq" class="nav__link">FAQ</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Reviews</a>
+              <a href="#review" class="nav__link">Reviews</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Contact</a>
+              <a href="#contact" class="nav__link">Contact</a>
             </li>
           </ul>
         </nav>
@@ -50,7 +50,7 @@
             like built-in appliances.
           </p>
           <div class="home__buttons">
-            <a href="#" class="btn btn--orange">Buy now</a>
+            <a href="#pricing" class="btn btn--orange">Buy now</a>
             <a href="#features" class="btn btn--orange">See more</a>
           </div>
         </div>
@@ -187,7 +187,7 @@
           <p class="video__desc">
             Design a fridge that fits your style.
           </p>
-          <a class="btn btn--video" href="https://www.youtube.com/watch?v=6cMPSUTKur0">
+          <a class="btn btn--video" target="_blank" href="https://www.youtube.com/watch?v=6cMPSUTKur0">
             <span>Watch video</span>
             <svg class="video__icon" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g id="24 / music / player-play-circle">
@@ -198,7 +198,7 @@
         </div>
       </div>
       <div class="video__thumbnail">
-        <a class="video__link" href="https://www.youtube.com/watch?v=6cMPSUTKur0">
+        <a class="video__link" target="_blank" href="https://www.youtube.com/watch?v=6cMPSUTKur0">
           <img src="images/thumbnail.png" alt="video-thumbnail" class="video__img">
           <img src="images/player-play-circle-lg-white.png" alt="play-icon" class="video__play">
         </a>
@@ -252,14 +252,42 @@
         <div class="faq__content">
           <img src="images/faq.png" alt="person-holding-papers" class="faq__img">
           <div class="faq__accordion">
-            <div class="faq__accordion--tab">
-
+            <div class="faq__accordion--tab close">
+              <div class="faq__accordion--header">
+                <h3>Lorem ipsum dolor sit amet?</h3>
+              </div>
+              <div class="faq__accordion--info">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore 
+                  distinctio accusamus, modi et doloremque velit iure illum, iste 
+                  commodi ipsum quibusdam sint optio nisi placeat dolor. Praesentium 
+                  accusantium velit ipsa?
+                </p>
+              </div>
             </div>
-            <div class="faq__accordion--tab">
-
+            <div class="faq__accordion--tab open">
+              <div class="faq__accordion--header">
+                <h3>What is Family Hub™</h3>
+              </div>
+              <div class="faq__accordion--info">
+                <p>
+                  Samsung’s Family Hub,™ now with Alexa built-in, lets you control your 
+                  Samsung smart appliances and devices, stream music, share pictures with 
+                  your family, and so much more, all right from your fridge.
+                </p>
+              </div>
             </div>
-            <div class="faq__accordion--tab">
-              
+            <div class="faq__accordion--tab close">
+              <div class="faq__accordion--header">
+                <h3>What is a counter-depth?</h3>
+              </div>
+              <div class="faq__accordion--info">
+                <p>
+                  Counter-depth refrigerators are typically under 30 inches deep. By contrast, 
+                  traditional refrigerators may stick out half a foot or more from the edge of 
+                  the kitchen counters.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -267,12 +295,44 @@
     </section>
     <!-- ===== reviews ===== -->
     <section class="reviews" id="reviews">
+      <div class="reviews__wrapper">
+        <h2 class="reviews__title title">Reviews</h2>
+        <div class="reviews__content">
+          <div class="reviews__tab">
+            <div class="reviews__header">
+              <div class="reviews__user">
+                <img src="images/james-avatar.png" alt="james-avatar" class="reviews__user--avatar">
+                <div class="reviews__user--info">
+                  <h3 class="reviews__username">James Lee</h3>
+                  <p class="reviews__userdata">student</p>
+                </div>
+              </div>
+              <div class="reviews__ratings">
+                <!-- input stars :) -->
+              </div>
+            </div>
+            <p class="reviews__desc">
+              On this refrigerator, the refrigerator is up top and the freezer is on the bottom. 
+              I love this feature! We use our refrigerator much more than the freezer, so it makes 
+              more sense to have the refrigerator at eye level so it’s easy to grab and see what 
+              you always use.
+            </p>
+          </div>
+          <!-- <div class="reviews__tab">
 
+          </div>
+          <div class="reviews__tab">
+
+          </div> -->
+        </div>
+      </div>
     </section>
     <!-- ===== contact ===== -->
     <section class="contact" id="contact">
 
     </section>
+
+    <script src="js/script.js"></script>
   </main>
 </body>
 </html>
