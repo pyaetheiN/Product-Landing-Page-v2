@@ -1,5 +1,29 @@
 @mixin sectionWrapper {
   max-width: rem(1200);
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1rem;
+}
+
+@mixin sectionPadding {
+  padding: rem(70) 1rem;
+}
+
+@mixin contentMargin {
+  margin-top: 5rem;
+}
+
+@mixin linearGradient {
+  background: linear-gradient(135deg, #00D1FF, #C1C1C1);
+}
+
+@mixin xl-min {
+  @media screen and (min-width: $screen-xl-min) {
+    @content;
+  }
+}
+
+@mixin lg-max {
+  @media screen and (max-width: $screen-lg-max) {
+    @content;
+  }
 }

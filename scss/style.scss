@@ -102,14 +102,14 @@ img{
 
   &__wrapper{
     @include sectionWrapper;
-    padding: rem(70) 1rem; // override
+    @include sectionPadding; // override
   }
   &__content{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 1.5rem;
     place-items: center;
-    margin-top: 5rem;
+    @include contentMargin;
   }
   &__item{
 
@@ -129,9 +129,12 @@ img{
       border-radius: rem(15);
       padding: 1em;
       text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     &--title{
-      color: $featureitemtitle;
+      color: $darkblue;
       font-size: 1.3em;
       display: flex;
       align-items: center;
@@ -182,5 +185,83 @@ img{
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  &__title{
+    font-size: 2.5em;
+    font-weight: 600;
+    color: $white;
+  }
+  &__desc{
+    font-size: 0.9125em;
+    font-weight: 600;
+    margin-top: 0.5rem;
+  }
+}
+
+
+// ===== pricing ===== \\
+.pricing{
+  background-color: $pricing;
+
+  &__wrapper{
+
+    @include sectionWrapper;
+    @include sectionPadding;
+  }
+  &__content{
+
+    @include contentMargin;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 4rem;
+  }
+  &__category{
+
+    &--title{
+      font-size: 1.5em;
+      color: $darkblue;
+    }
+  }
+  &__tabs{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid $divider;
+    margin-bottom: 2rem;
+  }
+  &__tab{
+    background-color: $white;
+    border: 1px solid $pricingbr;
+    border-radius: rem(10);
+    padding: 0.7em 1.5em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.2rem;
+    align-items: center;
+    transition: border 0.3s;
+    cursor: pointer;
+
+    &:hover{
+      border: 1px solid $black;
+    }
+
+    @include lg-max {
+      flex-basis: 100%;
+    }
+  }
+}
+
+
+// ===== faq ===== \\
+.faq{
+  @include linearGradient;
+  min-height: 100vh;
+
+  &__wrapper{
+
+    @include sectionWrapper;
+    @include sectionPadding;
   }
 }

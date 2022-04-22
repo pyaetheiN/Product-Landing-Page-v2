@@ -9,10 +9,13 @@
 </head>
 <body>
   <main>
+    <!-- ===== home ===== -->
     <section class="home" id="home">
+      <!-- ===== header ===== -->
       <header class="header">
         <nav class="nav">
           <img src="images/logo.png" alt="logo" class="logo">
+          <!-- ===== nav-list ===== -->
           <ul class="nav__list">
             <li class="nav__item">
               <a href="#" class="nav__link">Home</a>
@@ -53,70 +56,79 @@
         </div>
       </div>
     </section>
+    <!-- ===== features ===== -->
     <section class="features" id="features">
       <div class="features__wrapper">
         <h2 class="features__title title">Features</h2>
         <div class="features__content">
           <!-- ===== grid item 1 ===== -->
           <div class="features__item"> 
-            <h3 class="features__item--title">
-              <span>Customizable</span>
-              <svg class="features__item--icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
-                <g id="24 / grid / stack">
-                <path id="icon" fill-rule="evenodd" clip-rule="evenodd" d="M27.25 6.625V21.75C28.7688 21.75 30 20.5188 30 19V5.25C30 3.73122 28.7688 2.5 27.25 2.5H13.5C11.9812 2.5 10.75 3.73122 10.75 5.25H25.875C26.6344 5.25 27.25 5.86561 27.25 6.625ZM23.125 25.875V10.75C23.125 9.99061 22.5094 9.375 21.75 9.375H6.62501C6.62501 7.85622 7.85623 6.625 9.37501 6.625H23.125C24.6438 6.625 25.875 7.85622 25.875 9.375V23.125C25.875 24.6438 24.6438 25.875 23.125 25.875ZM19 10.75H5.25C3.73122 10.75 2.5 11.9812 2.5 13.5V27.25C2.5 28.7688 3.73122 30 5.25 30H19C20.5188 30 21.75 28.7688 21.75 27.25V13.5C21.75 11.9812 20.5188 10.75 19 10.75ZM5.25 27.25V13.5H19V27.25H5.25Z" fill="#030083"/>
-                </g>
-              </svg>
-            </h3>
-            <p class="features__item--desc">
-              With 12 color panels in 2 finishes,<br>
-              Customize your refrigerator colors
-            </p>
+            <div>
+              <h3 class="features__item--title">
+                <span>Customizable</span>
+                <svg class="features__item--icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                  <g id="24 / grid / stack">
+                  <path id="icon" fill-rule="evenodd" clip-rule="evenodd" d="M27.25 6.625V21.75C28.7688 21.75 30 20.5188 30 19V5.25C30 3.73122 28.7688 2.5 27.25 2.5H13.5C11.9812 2.5 10.75 3.73122 10.75 5.25H25.875C26.6344 5.25 27.25 5.86561 27.25 6.625ZM23.125 25.875V10.75C23.125 9.99061 22.5094 9.375 21.75 9.375H6.62501C6.62501 7.85622 7.85623 6.625 9.37501 6.625H23.125C24.6438 6.625 25.875 7.85622 25.875 9.375V23.125C25.875 24.6438 24.6438 25.875 23.125 25.875ZM19 10.75H5.25C3.73122 10.75 2.5 11.9812 2.5 13.5V27.25C2.5 28.7688 3.73122 30 5.25 30H19C20.5188 30 21.75 28.7688 21.75 27.25V13.5C21.75 11.9812 20.5188 10.75 19 10.75ZM5.25 27.25V13.5H19V27.25H5.25Z" fill="#030083"/>
+                  </g>
+                </svg>
+              </h3>
+              <p class="features__item--desc">
+                With 12 color panels in 2 finishes,<br>
+                Customize your refrigerator colors
+              </p>
+            </div>
           </div>
           <!-- ===== grid item 2 ===== -->
           <div class="features__item">
-            <h3 class="features__item--title">
-              <span>Beverage Center</span>
-              <svg class="features__item--icon" width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g id="24 / food / coffee">
-                <path id="icon" fill-rule="evenodd" clip-rule="evenodd" d="M5.26789 3.67898L5.83526 2.54424C6.24462 1.72552 7.08142 1.20834 7.99679 1.20834H21.0032C21.9186 1.20834 22.7554 1.72552 23.1647 2.54424L23.7321 3.67898C24.6181 3.86952 25.341 4.54838 25.5677 5.45555L26.1719 7.87222C26.4956 9.16705 25.7084 10.4791 24.4135 10.8029C24.2801 10.8362 24.1442 10.8581 24.0073 10.8683L21.5896 27.7917H7.41035L4.99274 10.8684C3.74205 10.7764 2.75594 9.73253 2.75594 8.45834C2.75594 8.26075 2.78017 8.06391 2.82809 7.87222L3.43226 5.45555C3.65905 4.54838 4.38193 3.86952 5.26789 3.67898ZM7.43488 10.875H21.5651L19.4937 25.375H9.50631L7.43488 10.875ZM5.77677 6.04168H6.78846L7.99679 3.62501H21.0032L22.2115 6.04168H23.2232L23.8274 8.45834H5.1726L5.77677 6.04168Z" fill="#030083"/>
-                </g>
-              </svg>
-            </h3>
-            <p class="features__item--desc">
-              Easy access to cold water<br>
-              AutoFill Water Pitcher <br>
-              Water two ways 
-            </p>
+            <div>
+              <h3 class="features__item--title">
+                <span>Beverage Center</span>
+                <svg class="features__item--icon" width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g id="24 / food / coffee">
+                  <path id="icon" fill-rule="evenodd" clip-rule="evenodd" d="M5.26789 3.67898L5.83526 2.54424C6.24462 1.72552 7.08142 1.20834 7.99679 1.20834H21.0032C21.9186 1.20834 22.7554 1.72552 23.1647 2.54424L23.7321 3.67898C24.6181 3.86952 25.341 4.54838 25.5677 5.45555L26.1719 7.87222C26.4956 9.16705 25.7084 10.4791 24.4135 10.8029C24.2801 10.8362 24.1442 10.8581 24.0073 10.8683L21.5896 27.7917H7.41035L4.99274 10.8684C3.74205 10.7764 2.75594 9.73253 2.75594 8.45834C2.75594 8.26075 2.78017 8.06391 2.82809 7.87222L3.43226 5.45555C3.65905 4.54838 4.38193 3.86952 5.26789 3.67898ZM7.43488 10.875H21.5651L19.4937 25.375H9.50631L7.43488 10.875ZM5.77677 6.04168H6.78846L7.99679 3.62501H21.0032L22.2115 6.04168H23.2232L23.8274 8.45834H5.1726L5.77677 6.04168Z" fill="#030083"/>
+                  </g>
+                </svg>
+              </h3>
+              <p class="features__item--desc">
+                Easy access to cold water<br>
+                AutoFill Water Pitcher <br>
+                Water two ways 
+              </p>
+            </div>
           </div>
           <!-- ===== grid item 3 ===== -->
           <div class="features__item">
-            <h3 class="features__item--title">
-              <span>Dual Auto Ice Maker</span>
-              <svg class="features__item--icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g id="24 / music / player-stop">
-                <path id="icon" fill-rule="evenodd" clip-rule="evenodd" d="M25 2.5H4.99999C3.61928 2.5 2.49999 3.61929 2.49999 5V25C2.49999 26.3807 3.61928 27.5 4.99999 27.5H25C26.3807 27.5 27.5 26.3807 27.5 25V5C27.5 3.61929 26.3807 2.5 25 2.5ZM5 25V5H25V25H5Z" fill="#030083"/>
-                </g>
-              </svg>                
-            </h3>
-            <p class="features__item--desc">
-              Produces up to 5.3* lb of ice <br>
-              Stores up to 9.3* lb of ice
-            </p>
+            <div>
+              <h3 class="features__item--title">
+                <span>Dual Auto Ice Maker</span>
+                <svg class="features__item--icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g id="24 / music / player-stop">
+                  <path id="icon" fill-rule="evenodd" clip-rule="evenodd" d="M25 2.5H4.99999C3.61928 2.5 2.49999 3.61929 2.49999 5V25C2.49999 26.3807 3.61928 27.5 4.99999 27.5H25C26.3807 27.5 27.5 26.3807 27.5 25V5C27.5 3.61929 26.3807 2.5 25 2.5ZM5 25V5H25V25H5Z" fill="#030083"/>
+                  </g>
+                </svg>                
+              </h3>
+              <p class="features__item--desc">
+                Produces up to 5.3* lb of ice <br>
+                Stores up to 9.3* lb of ice
+              </p>
+            </div>
           </div>
           <!-- ===== grid item 4 ===== -->
           <div class="features__item">
-            <h3 class="features__item--title">
-              <span>SpaceMax Technology</span>
-              <svg class="features__item--icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g id="24 / maps / globe">
-                <path id="icon" fill-rule="evenodd" clip-rule="evenodd" d="M14 3.5C18.5103 3.5 22.1667 7.15634 22.1667 11.6667C22.1667 16.177 18.5103 19.8333 14 19.8333C9.48967 19.8333 5.83333 16.177 5.83333 11.6667C5.83333 7.15634 9.48967 3.5 14 3.5ZM15.1667 23.2757V24.5H17.5V26.8333H10.5V24.5H12.8333V23.2755C10.1654 23.0099 7.69682 21.8391 5.80167 19.9672L7.4414 18.3071C9.17768 20.0222 11.5101 21 14 21C19.1547 21 23.3333 16.8213 23.3333 11.6667C23.3333 9.21632 22.3865 6.91802 20.7198 5.18931L22.3995 3.56975C24.4815 5.7291 25.6667 8.6061 25.6667 11.6667C25.6667 17.7162 21.0622 22.6904 15.1667 23.2757ZM8.16666 11.6667C8.16666 8.44501 10.7783 5.83333 14 5.83333C17.2217 5.83333 19.8333 8.44501 19.8333 11.6667C19.8333 14.8883 17.2217 17.5 14 17.5C10.7783 17.5 8.16666 14.8883 8.16666 11.6667Z" fill="#030083"/>
-                </g>
-                </svg>
-            </h3>
-            <p class="features__item--desc">
-              More space inside same outside <br>
-              Large Crispers & Drawers
-            </p>
+            <div>
+              <h3 class="features__item--title">
+                <span>SpaceMax Technology</span>
+                <svg class="features__item--icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g id="24 / maps / globe">
+                  <path id="icon" fill-rule="evenodd" clip-rule="evenodd" d="M14 3.5C18.5103 3.5 22.1667 7.15634 22.1667 11.6667C22.1667 16.177 18.5103 19.8333 14 19.8333C9.48967 19.8333 5.83333 16.177 5.83333 11.6667C5.83333 7.15634 9.48967 3.5 14 3.5ZM15.1667 23.2757V24.5H17.5V26.8333H10.5V24.5H12.8333V23.2755C10.1654 23.0099 7.69682 21.8391 5.80167 19.9672L7.4414 18.3071C9.17768 20.0222 11.5101 21 14 21C19.1547 21 23.3333 16.8213 23.3333 11.6667C23.3333 9.21632 22.3865 6.91802 20.7198 5.18931L22.3995 3.56975C24.4815 5.7291 25.6667 8.6061 25.6667 11.6667C25.6667 17.7162 21.0622 22.6904 15.1667 23.2757ZM8.16666 11.6667C8.16666 8.44501 10.7783 5.83333 14 5.83333C17.2217 5.83333 19.8333 8.44501 19.8333 11.6667C19.8333 14.8883 17.2217 17.5 14 17.5C10.7783 17.5 8.16666 14.8883 8.16666 11.6667Z" fill="#030083"/>
+                  </g>
+                  </svg>
+              </h3>
+              <p class="features__item--desc">
+                More space inside same outside <br>
+                Large Crispers & Drawers
+              </p>
+            </div>
           </div>
           <!-- ===== grid item 5 (image) ===== -->
           <div class="features__item">
@@ -124,43 +136,50 @@
           </div>
           <!-- ===== grid item 6 ===== -->
           <div class="features__item">
-            <h3 class="features__item--title">
-              <span>Wifi Connectivity</span>
-              <svg class="features__item--icon" width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g id="24 / connection / wi-fi">
-                <path id="icon" fill-rule="evenodd" clip-rule="evenodd" d="M2.85301 12.5132C2.81851 12.5477 2.78418 12.5823 2.75 12.617L4.69461 14.5616C4.72874 14.5269 4.76305 14.4922 4.79755 14.4577C11.2067 8.04859 21.5767 8.01427 28.0282 14.3548L29.9728 12.4102C22.4473 4.99576 10.3361 5.0301 2.85301 12.5132ZM6.53531 16.4023C11.905 11.0326 20.611 11.0326 25.9807 16.4023L24.0362 18.3468C19.7404 14.0511 12.7756 14.0511 8.47985 18.3468L6.53531 16.4023ZM22.0917 20.2914C18.8698 17.0695 13.6462 17.0695 10.4244 20.2914L12.3689 22.2359C14.5168 20.088 17.9992 20.088 20.1471 22.2359L22.0917 20.2914ZM18.2026 24.1805C17.1286 23.1065 15.3874 23.1065 14.3135 24.1805L16.258 26.125L18.2026 24.1805Z" fill="#02007C"/>
-                </g>
-              </svg>                
-            </h3>
-            <p class="features__item--desc">
-              Set temperature at will  <br>
-              Easy remote control <br>
-              Open/close door
-            </p>
+            <div>
+              <h3 class="features__item--title">
+                <span>Wifi Connectivity</span>
+                <svg class="features__item--icon" width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g id="24 / connection / wi-fi">
+                  <path id="icon" fill-rule="evenodd" clip-rule="evenodd" d="M2.85301 12.5132C2.81851 12.5477 2.78418 12.5823 2.75 12.617L4.69461 14.5616C4.72874 14.5269 4.76305 14.4922 4.79755 14.4577C11.2067 8.04859 21.5767 8.01427 28.0282 14.3548L29.9728 12.4102C22.4473 4.99576 10.3361 5.0301 2.85301 12.5132ZM6.53531 16.4023C11.905 11.0326 20.611 11.0326 25.9807 16.4023L24.0362 18.3468C19.7404 14.0511 12.7756 14.0511 8.47985 18.3468L6.53531 16.4023ZM22.0917 20.2914C18.8698 17.0695 13.6462 17.0695 10.4244 20.2914L12.3689 22.2359C14.5168 20.088 17.9992 20.088 20.1471 22.2359L22.0917 20.2914ZM18.2026 24.1805C17.1286 23.1065 15.3874 23.1065 14.3135 24.1805L16.258 26.125L18.2026 24.1805Z" fill="#02007C"/>
+                  </g>
+                </svg>                
+              </h3>
+              <p class="features__item--desc">
+                Set temperature at will  <br>
+                Easy remote control <br>
+                Open/close door
+              </p>
+            </div>
           </div>
           <!-- ===== grid item 7 ===== -->
           <div class="features__item">
-            <h3 class="features__item--title">
-              <span>Twin Cooling Plus™</span>
-            </h3>
-            <p class="features__item--desc">
-              Independently controls the temperature <br>
-              Keep your fruits and vegetables <br> fresher for longer
-            </p>
+            <div>
+              <h3 class="features__item--title">
+                <span>Twin Cooling Plus™</span>
+              </h3>
+              <p class="features__item--desc">
+                Independently controls the temperature <br>
+                Keep your fruits and vegetables <br> fresher for longer
+              </p>
+            </div>
           </div>
           <!-- ===== grid item 8 ===== -->
           <div class="features__item">
-            <h3 class="features__item--title">
-              <span>FlexZone™</span>
-            </h3>
-            <p class="features__item--desc">
-              Organize food efficiently with flex dividers<br>
-              Customize cooling to suit your needs 
-            </p>
+            <div>
+              <h3 class="features__item--title">
+                <span>FlexZone™</span>
+              </h3>
+              <p class="features__item--desc">
+                Organize food efficiently with flex dividers<br>
+                Customize cooling to suit your needs 
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- ===== video ===== -->
     <section class="video" id="video">
       <div class="video__content">
         <div class="video__text">
@@ -168,22 +187,91 @@
           <p class="video__desc">
             Design a fridge that fits your style.
           </p>
-          <a href="#" class="btn video__btn">
+          <a class="btn btn--video" href="https://www.youtube.com/watch?v=6cMPSUTKur0">
             <span>Watch video</span>
             <svg class="video__icon" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g id="24 / music / player-play-circle">
-              <path id="icon" fill-rule="evenodd" clip-rule="evenodd" d="M25.875 13.5C25.875 20.3345 20.3345 25.875 13.5 25.875C6.66548 25.875 1.125 20.3345 1.125 13.5C1.125 6.66548 6.66548 1.125 13.5 1.125C20.3345 1.125 25.875 6.66548 25.875 13.5ZM3.375 13.5C3.375 19.0919 7.90812 23.625 13.5 23.625C19.0919 23.625 23.625 19.0919 23.625 13.5C23.625 7.90812 19.0919 3.375 13.5 3.375C7.90812 3.375 3.375 7.90812 3.375 13.5ZM9 7.875C9 6.99138 9.97194 6.45269 10.7212 6.921L19.7212 12.546C20.4263 12.9866 20.4263 14.0134 19.7212 14.454L10.7212 20.079C9.97194 20.5473 9 20.0086 9 19.125V7.875ZM11.25 9.90478L17.0024 13.5L11.25 17.0952V9.90478Z" fill="black"/>
+              <path id="icon" fill-rule="evenodd" clip-rule="evenodd" d="M25.875 13.5C25.875 20.3345 20.3345 25.875 13.5 25.875C6.66548 25.875 1.125 20.3345 1.125 13.5C1.125 6.66548 6.66548 1.125 13.5 1.125C20.3345 1.125 25.875 6.66548 25.875 13.5ZM3.375 13.5C3.375 19.0919 7.90812 23.625 13.5 23.625C19.0919 23.625 23.625 19.0919 23.625 13.5C23.625 7.90812 19.0919 3.375 13.5 3.375C7.90812 3.375 3.375 7.90812 3.375 13.5ZM9 7.875C9 6.99138 9.97194 6.45269 10.7212 6.921L19.7212 12.546C20.4263 12.9866 20.4263 14.0134 19.7212 14.454L10.7212 20.079C9.97194 20.5473 9 20.0086 9 19.125V7.875ZM11.25 9.90478L17.0024 13.5L11.25 17.0952V9.90478Z" fill="#FF9A01"/>
               </g>
             </svg>
           </a>
         </div>
       </div>
       <div class="video__thumbnail">
-        <a href="" class="video__link">
+        <a class="video__link" href="https://www.youtube.com/watch?v=6cMPSUTKur0">
           <img src="images/thumbnail.png" alt="video-thumbnail" class="video__img">
           <img src="images/player-play-circle-lg-white.png" alt="play-icon" class="video__play">
         </a>
       </div>
+    </section>
+    <!-- ===== pricing ===== -->
+    <section class="pricing" id="pricing">
+      <div class="pricing__wrapper">
+        <h2 class="pricing__title title">Pricing</h2>
+        <div class="pricing__content">
+          <img src="images/refrigerator2.png" alt="refrigerator" class="pricing__img">
+          <div class="pricing__text">
+            <div class="pricing__category">
+              <h3 class="pricing__category--title">Features</h3>
+              <div class="pricing__tabs">
+                <div class="pricing__tab">
+                  <p class="pricing__tab--type">Family Hub</p>
+                  <p class="pricing__tab--price">$4398.97</p>
+                </div>
+                <div class="pricing__tab">
+                  <p class="pricing__tab--type">Beverage Center</p>
+                  <p class="pricing__tab--price">$3099</p>
+                </div>
+                <div class="pricing__tab">
+                  <p class="pricing__tab--type">Auto Fill Water Pitcher</p>
+                  <p class="pricing__tab--price">$2799</p>
+                </div>
+              </div>
+            </div>
+            <div class="pricing__category">
+              <h3 class="pricing__category--title">Depth</h3>
+              <div class="pricing__tabs">
+                <div class="pricing__tab">
+                  <p class="pricing__tab--type">Full Depth</p>
+                  <p class="pricing__tab--price">$4298.97</p>
+                </div>
+                <div class="pricing__tab">
+                  <p class="pricing__tab--type">Beverage Center</p>
+                  <p class="pricing__tab--price">$4398.97</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== faq ===== -->
+    <section class="faq" id="faq">
+      <div class="faq__wrapper">
+        <h2 class="faq__title title">Faqs</h2>
+        <div class="faq__content">
+          <img src="images/faq.png" alt="person-holding-papers" class="faq__img">
+          <div class="faq__accordion">
+            <div class="faq__accordion--tab">
+
+            </div>
+            <div class="faq__accordion--tab">
+
+            </div>
+            <div class="faq__accordion--tab">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== reviews ===== -->
+    <section class="reviews" id="reviews">
+
+    </section>
+    <!-- ===== contact ===== -->
+    <section class="contact" id="contact">
+
     </section>
   </main>
 </body>

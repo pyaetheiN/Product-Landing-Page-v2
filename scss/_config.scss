@@ -4,15 +4,23 @@
 // color
 $white: #FFF;
 $black: #000;
-
-// buttons
 $orange: #FF9A01;
+$darkblue: #02007C;
+
+// layout background
+$navbar: #F3F2F0; 
+$features: #FCFCFC;
+$pricing: #F3F3F3;
 
 // components background
-$navbar: #F3F2F0;  
-$featureitemtitle: #02007C;
 $featureitem: #DFDFDF;
 $featureitembr: #BABABA;
 
-// layout background
-$features: #FCFCFC;
+$pricingbr: #C7C7C7;
+
+$divider: #BABABA;
+
+// media queries
+$screen-xl-min: 1200px;
+
+$screen-lg-max: 968px;

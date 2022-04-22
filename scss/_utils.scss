@@ -1,5 +1,9 @@
 @import "_functions.scss";
 
+.flex{
+  display: flex;
+}
+
 // links
 .nav__link{
   color: $black;
@@ -12,14 +16,22 @@
   padding: rem(10) rem(20);
   border-radius: 2rem;
   transition: 0.3s;
-
+  
+  &:hover{
+    transform: scale(1.08);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+  }
   &--orange{
     background-color: $orange;
-
-    &:hover{
-      transform: scale(1.08);
-      box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-    }
+  }
+  &--video{
+    background-color: $white;
+    color: $orange;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
