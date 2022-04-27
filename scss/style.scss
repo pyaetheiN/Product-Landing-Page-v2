@@ -353,12 +353,17 @@ img{
   &__wrapper{
     @include sectionWrapper;
     @include sectionPadding;
+    overflow-x: hidden;
   }
   &__content{
     @include contentMargin;
+    display: flex;
+    column-gap: 2rem;
+    transition: 0.3s;
   }
   &__tab{
-    max-width: rem(450);
+    // max-width: rem(450);
+    min-width: rem(450);
     background-color: $white;
     padding: 1.5em 2em;
     border-radius: rem(10);
@@ -390,5 +395,24 @@ img{
   &__desc{
     font-size: 0.875em;
     padding-top: 1em;
+  }
+  &__buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+    column-gap: 0.5rem;
+  }
+  &__btn{
+    background-color: rgba(0,0,0,0.7);
+    width: rem(10);
+    height: rem(10);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  &__btn.active{
+    width: rem(25);
+    border-radius: rem(5);
   }
 }

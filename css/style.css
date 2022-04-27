@@ -505,14 +505,22 @@ img {
   margin: 0 auto;
   padding: 0 1rem;
   padding: 4.375rem 1rem;
+  overflow-x: hidden;
 }
 
 .reviews__content {
   margin-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .reviews__tab {
-  max-width: 28.125rem;
+  min-width: 28.125rem;
   background-color: #FFF;
   padding: 1.5em 2em;
   border-radius: 0.625rem;
@@ -553,5 +561,35 @@ img {
 .reviews__desc {
   font-size: 0.875em;
   padding-top: 1em;
+}
+
+.reviews__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2rem 0;
+  -webkit-column-gap: 0.5rem;
+          column-gap: 0.5rem;
+}
+
+.reviews__btn {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.reviews__btn.active {
+  width: 1.5625rem;
+  border-radius: 0.3125rem;
 }
 /*# sourceMappingURL=style.css.map */
