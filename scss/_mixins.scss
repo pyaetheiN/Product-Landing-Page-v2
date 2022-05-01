@@ -5,7 +5,7 @@
 }
 
 @mixin sectionPadding {
-  padding: rem(70) 1rem;
+  padding: rem(100) 1rem rem(120);
 }
 
 @mixin contentMargin {
@@ -16,8 +16,15 @@
   background: linear-gradient(135deg, #00D1FF, #C1C1C1);
 }
 
+// media queries
 @mixin xl-min {
   @media screen and (min-width: $screen-xl-min) {
+    @content;
+  }
+}
+
+@mixin xl-max {
+  @media screen and (max-width: $screen-xl-max) {
     @content;
   }
 }
