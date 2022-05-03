@@ -34,3 +34,15 @@
     @content;
   }
 }
+
+@mixin md-max {
+  @media screen and (max-width: $screen-md-max) {
+    @content;
+  }
+}
+
+@mixin sm-max {
+  @media screen and (max-width: $screen-sm-max) {
+    @content;
+  }
+}

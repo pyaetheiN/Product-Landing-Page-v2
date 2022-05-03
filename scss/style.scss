@@ -14,6 +14,11 @@
 body{
   font-size: 16px;
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+
+  @include sm-max{
+    font-size: 14px;
+  }
 }
 
 
@@ -44,9 +49,47 @@ img{
   max-width: rem(1200);
   margin: 0 auto;
   padding: 0 1rem;
+  position: relative;
 
+  &__menu{
+    display: none;
+    z-index: 999;
+    background-image: url("../images/24/basic/menu.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: rem(35);
+    height: rem(35);
+    padding-right: 0.5rem;
+    transition: 0.3s ease;
+
+    &.active{
+      background-image: url("../images/24/basic/plus.svg");
+      transform: rotate(45deg);
+    }
+
+    @include md-max{
+      display: block;
+    }
+  }
   &__list{
     display: flex;
+
+    &.active{
+      opacity: 1;
+    }
+    @include md-max{
+      position: absolute;
+      top: 0;
+      right: 0;
+      opacity: 0;
+      flex-direction: column;
+      background-color: $navbar;
+      min-height: 100vh;
+      width: rem(200);
+      padding: 5rem 0 0 1rem;
+      transition: 0.4s ease-in-out;
+      z-index: 10;
+    }
   }
   &__link{
     padding: 1em 1.5em;
@@ -55,6 +98,24 @@ img{
     &:hover{
       background-color: #fff;
       border-bottom: 3px solid $orange;
+
+      @include md-max{
+        background-color: transparent;
+        border-bottom: none;
+        color: $orange;
+        font-weight: 500;
+      }
+    }
+    @include md-max{
+      font-size: 1.2em;
+    }
+  }
+  &__item{
+
+    @include md-max{
+      &:not(:nth-of-type(6)){
+        margin-bottom: 1.5rem;
+      }
     }
   }
 }
@@ -67,6 +128,10 @@ img{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 90%;
+
+  @include lg-max{
+    background-position: center right;
+  }
 
   &__wrapper{
     color: $white;
@@ -83,22 +148,40 @@ img{
     .be{
       font-weight: 700;
     }
+
+    @include sm-max{
+      font-size: 2.5em;
+    }
   }
   &__subhead{
     font-size: 2.5em;
     font-weight: 500;
-    transform: translateY(-20px);
+    transform: translateY(-15px);
+    line-height: 1;
+
+    @include sm-max{
+      font-size: 2em;
+      transform: translateY(-10px);
+    }
   }
   &__desc{
     font-size: 1em;
     max-width: rem(600);
     line-height: 1.7;
     backdrop-filter: blur(rem(2)); // fixing contrast with background
+
+    @include sm-max{
+      font-size: 0.8125em;
+    }
   }
   &__buttons{
     margin-top: 2rem;
     display: flex;
     column-gap: 1.5rem;
+
+    @include sm-max{
+      font-size: 0.8125em;
+    }
   }
 }
 
@@ -110,18 +193,21 @@ img{
   pointer-events: none;
 
   &__wrapper{
-    @include sectionWrapper;
-    @include sectionPadding; // override
+    @include sectionWrapper();
+    @include sectionPadding(); // override
   }
   &__content{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 1.5rem;
     place-items: center;
-    @include contentMargin;
+    @include contentMargin();
 
     @include lg-max{
       grid-template-columns: repeat(2, 1fr);
+    }
+    @include md-max{
+      grid-template-columns: 1fr;
     }
   }
   &__item{
@@ -133,33 +219,24 @@ img{
     &:nth-of-type(8){
       grid-column: 3;
     }
-    // @include lg-max{
+    @include lg-max{
 
-    //   &:nth-of-type(5){
-    //     grid-column: 1;
-    //     grid-row: 1 / 3;
-    //   }
-    //   &:nth-of-type(2){
-    //     grid-column: 2;
-    //     grid-row: 2 / 3;
-    //   }
-    //   &:nth-of-type(3){
-    //     grid-column: 1;
-    //     grid-row: 3;
-    //   }
-    //   &:nth-of-type(4){
-    //     grid-column: 2;
-    //     grid-row: 3;
-    //   }
-    //   // &:nth-of-type(5){
-    //   //   grid-column: 1;
-    //   //   grid-row: 4;
-    //   // }
-    //   // &:nth-of-type(6){
-    //   //   grid-column: 2;
-    //   //   grid-row: 4;
-    //   // }
-    // }
+      &:nth-of-type(5){
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+        order: 1;
+      }
+      &:nth-of-type(8){
+        grid-column: 1;
+      }
+    }
+    @include md-max{
+      &:nth-of-type(5){
+        grid-column: 1;
+        grid-row: 1 / 3;
+        order: 1;
+      }
+    }
     &:not(:nth-child(5)){
       background-color: $featureitem;
       /* min 310px , preferred 330px,  max 350 */
@@ -172,6 +249,13 @@ img{
       display: flex;
       align-items: center;
       justify-content: center;
+
+      @include lg-max{
+        min-width: rem(400);
+      }
+      @include md-max{
+        min-width: rem(290);
+      }
     }
     &--title{
       color: $darkblue;
@@ -194,6 +278,10 @@ img{
     }
     &--img{
       transform: scale(1.25);
+
+      @include lg-max{
+        transform: scale(1.1);
+      }
     }
   }
 }
@@ -201,15 +289,25 @@ img{
 
 // ===== video ===== \\
 .video{
-  background-color: $orange;
   min-height: calc(100vh - 450px);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 
+  &__wrapper{
+    background-color: $orange;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include lg-max{
+      flex-direction: column;
+    }
+  }
   &__thumbnail{
-    flex-basis: 50vw;
+    flex-basis: 50%;
     position: relative;
+
+    @include lg-max{
+      transform: scale(1.1);
+    }
   }
   &__link{
     display: flex; // covering space up
@@ -219,22 +317,46 @@ img{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    
+    @include sm-max{
+      width: rem(60);
+    }
   }
   &__content{
     flex-basis: 50vw;
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    @include sm-max{
+      padding: 1rem;
+    }
   }
   &__title{
     font-size: 2.5em;
     font-weight: 600;
     color: $white;
+
+    @include sm-max{
+      font-size: 2em;
+    }
   }
   &__desc{
     font-size: 0.9125em;
     font-weight: 600;
     margin-top: 0.5rem;
+
+    @include sm-max{
+      font-size: 0.8125em;
+    }
+  }
+  @include sm-max{
+    &__btn{
+      font-size: 0.8125em;
+    }
+    &__icon{
+      width: rem(20);
+    }
   }
 }
 
@@ -245,21 +367,38 @@ img{
 
   &__wrapper{
 
-    @include sectionWrapper;
-    @include sectionPadding;
+    @include sectionWrapper();
+    @include sectionPadding();
   }
   &__content{
 
-    @include contentMargin;
+    @include contentMargin();
     display: flex;
     align-items: center;
     justify-content: center;
     column-gap: 4rem;
+
+    @include md-max{
+      flex-direction: column;
+    }
+  }
+  &__img{
+
+    @include lg-max{
+      width: rem(500);
+    }
   }
   &__text{
 
     @include xl-max{
       max-width: rem(400);
+    }
+    @include lg-max{
+      max-width: rem(300);
+    }
+    @include md-max{
+      max-width: 100%;
+      margin-top: 2.5rem;
     }
   }
   &__category{
@@ -267,6 +406,16 @@ img{
     &--title{
       font-size: 1.5em;
       color: $darkblue;
+
+      @include md-max{
+        text-align: center;
+      }
+    }
+
+    @include lg-max{
+      &:nth-of-type(1) .pricing__tabs{
+        margin-bottom: 2rem;
+      }
     }
   }
   &__tabs{
@@ -275,12 +424,16 @@ img{
     gap: 1rem;
     padding: 2rem 0;
     border-bottom: 1px solid $divider;
-    margin-bottom: 2rem;
+
+    @include md-max{
+      justify-content: center;
+    }
   }
   &__tab{
     background-color: $white;
     border: 1px solid $pricingbr;
     border-radius: rem(10);
+    min-width: rem(150);
     padding: 0.7em 1.5em;
     display: flex;
     flex-direction: column;
@@ -297,13 +450,15 @@ img{
     @include lg-max {
       flex-basis: 100%;
     }
+    @include md-max{
+      flex-basis: initial;
+    }
   }
 }
 
 
 // ===== faq ===== \\
 .faq{
-  // @include linearGradient;
   background-color: #15262e;
 
   &__wrapper{
@@ -364,17 +519,18 @@ img{
         &::after{
           position: absolute;
           content: '';
-          bottom: rem(5);
+          top: rem(4);
           left: rem(10);
           background-color: $black;
           width: rem(2);
           height: rem(20);
+          transition: 0.3s ease-in-out;
         }
       }
     }
     &--info{
       overflow-y: hidden;
-      transition: 0.3s;
+      transition: 0.5s ease-in-out;
 
       p{
         padding-top: 1em;
@@ -394,11 +550,120 @@ img{
   .faq__accordion--header{
 
     h3::after{
-      display: none;
+      opacity: 0;
     }
   }
   .faq__accordion--info{
     max-height: 0;
+  }
+}
+
+
+// ===== contact ===== \\
+.contact{
+  background-color: $contact;
+
+  &__wrapper{
+    @include sectionWrapper();
+    @include sectionPadding();
+  }
+  &__bg{
+    background-color: $contactbg;
+    max-width: rem(450);
+    height: rem(450);
+    border-radius: rem(10) rem(50) rem(10) rem(50);
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+
+    @include lg-max{
+      height: rem(650);
+      border-radius: rem(20) rem(100) rem(20) rem(100);
+    }
+    @include sm-max{
+      height: rem(500);
+    }
+  }
+  &__title{
+    color: $white;
+    font-weight: 500;
+    position: absolute;
+    top: rem(20);
+    right: rem(25);
+
+    @include lg-max{
+      z-index: 5;
+      top: rem(90);
+      right: 50%;
+      transform: translateX(50%);
+      text-shadow: 0 5px 20px rgba(0,0,0,0.8);
+    }
+    @include sm-max{
+      min-width: rem(200);
+    }
+  }
+  &__img{
+    width: rem(350);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: rem(-175);
+    transform: translateY(-50%);
+
+    @include lg-max{
+      border-radius: 0;
+      width: 100%;
+      top: 0;
+      left: 0;
+      transform: translateY(0%);
+    }
+  }
+  &__card{
+    position: absolute;
+    top: 50%;
+    right: rem(-222);
+    transform: translateY(-50%);
+    background-color: $white;
+    border-radius: rem(10);
+    text-align: center;
+    padding: 1em 1.5em;
+
+    @include lg-max{
+      right: 0;
+      min-width: rem(300);
+      top: 46%;
+      right: 50%;
+      transform: translateX(50%);
+    }
+    @include sm-max{
+      min-width: rem(250);
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, -80%);
+    }
+
+    &--img{
+      border-radius: 50%;
+    }
+    &--header{
+      font-size: 1.5em;
+      font-weight: 600;
+
+      @include sm-max{
+        font-size: 1.2em;
+      }
+    }
+    &--desc{
+      font-size: 0.75em;
+      
+      @include lg-max{
+        margin-top: 0.5rem;
+      }
+    }
+  }
+  &__btn{
+    margin-top: 1rem;
+    font-size: 0.8125em;
   }
 }
 
@@ -408,25 +673,34 @@ img{
   background-color: $reviews;
 
   &__wrapper{
-    @include sectionWrapper;
-    @include sectionPadding;
-    max-width: rem(480);
+    @include sectionWrapper();
+    @include sectionPadding();
     overflow-x: hidden;
+    max-width: rem(450);
+    margin: 0 auto;
+
+    @include sm-max{
+      max-width: rem(365);
+    }
   }
   &__content{
-    @include contentMargin;
+    @include contentMargin();
     display: flex;
     column-gap: 2rem;
     transition: 0.3s;
   }
   &__tab{
-    min-width: rem(450);
+    min-width: rem(385);
     background-color: $white;
     padding: 1.5em 2em;
     border-radius: rem(10);
     box-shadow: rem(5) rem(5) rem(10) rgba(0,0,0,0.25);
     user-select: none;
     transition: 0.3s ease-in-out;
+
+    @include sm-max{
+      min-width: rem(300);
+    }
   }
   &__user{
     display: flex;
@@ -477,6 +751,7 @@ img{
   }
 }
 
+// touch slider
 .grabbing{
   cursor: grab;
 }
@@ -491,19 +766,44 @@ img{
   color: $white;
 
   &__wrapper{
-    @include sectionWrapper;
+    @include sectionWrapper();
     padding: rem(100) 1rem 0;
+
+    @include lg-max{
+      padding-bottom: rem(100);
+    }
   }
   &__content{
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1.5fr;
+
+    @include lg-max{
+      grid-template-columns: 1fr;
+      row-gap: 3rem;
+    }
   }
   .logo{
     width: rem(250);
     transform: translate(-12px, 70px);
   }
-  .grid-col:nth-of-type(1){
-    transform: translateY(-135px);
+  .grid-col{
+
+    &:nth-of-type(1){
+      transform: translateY(-135px);
+    }
+    @include lg-max{
+
+      &:nth-of-type(1){
+        margin-bottom: rem(-130);
+      }
+      &:nth-of-type(2),
+      &:nth-of-type(3){
+        order: 3;
+      }
+      &:nth-of-type(4){
+        order: 2;
+      }
+    }
   }
   &__desc{
     color: $orange;

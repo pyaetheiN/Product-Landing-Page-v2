@@ -20,6 +20,8 @@
               <path d="m195 38.57c2.96 0 3.87-2.04 4.08-3.08.09-.46.1-1.08.1-1.63v-31.5h10.78v30.53c.002.934-.031 1.868-.1 2.8-.75 7.95-7.03 10.53-14.86 10.53-7.84 0-14.12-2.58-14.87-10.53-.03-.42-.11-2.02-.1-2.8v-30.54h10.78v31.5c-.01.56.01 1.18.1 1.64.2 1.04 1.12 3.08 4.09 3.08m52.08-36.21.58 33.43h-.23l-9.8-33.43h-15.8v42.14h10.47l-.58-34.59h.23l10.51 34.59h15.17v-42.14zm36.75 35.77c3.08 0 4.16-1.95 4.35-3.1.09-.47.1-1.07.1-1.6v-6.2h-4.37v-6.2h15.09v11.42c0 .8-.02 1.38-.15 2.8-.7 7.76-7.43 10.53-14.98 10.53s-14.27-2.77-14.98-10.53c-.12-1.42-.15-2-.15-2.8v-17.92c0-.76.1-2.1.18-2.8.95-7.97 7.4-10.53 14.95-10.53s14.17 2.54 14.95 10.52c.14 1.36.1 2.8.1 2.8v1.43h-10.74v-2.39s0-1-.13-1.62c-.2-.94-1-3.1-4.26-3.1-3.1 0-4.01 2.05-4.24 3.1-.13.56-.18 1.32-.18 2.01v19.47c0 .54.02 1.14.1 1.62.2 1.14 1.28 3.09 4.36 3.09"/>
             </g>
           </svg>
+          <!-- ===== menu toggle ===== -->
+          <div class="nav__menu"></div>
           <!-- ===== nav-list ===== -->
           <ul class="nav__list">
             <li class="nav__item">
@@ -35,10 +37,10 @@
               <a href="#faq" class="nav__link">FAQ</a>
             </li>
             <li class="nav__item">
-              <a href="#review" class="nav__link">Reviews</a>
+              <a href="#contact" class="nav__link">Contact</a>
             </li>
             <li class="nav__item">
-              <a href="#contact" class="nav__link">Contact</a>
+              <a href="#reviews" class="nav__link">Reviews</a>
             </li>
           </ul>
         </nav>
@@ -186,27 +188,29 @@
     </section>
     <!-- ===== video ===== -->
     <section class="video" id="video">
-      <div class="video__content">
-        <div class="video__text">
-          <h2 class="video__title">Design for you, by you</h2>
-          <p class="video__desc">
-            Design a fridge that fits your style.
-          </p>
-          <a class="btn btn--video" target="_blank" href="https://www.youtube.com/watch?v=6cMPSUTKur0">
-            <span>Watch video</span>
-            <svg class="video__icon" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g id="24 / music / player-play-circle">
-              <path id="icon" fill-rule="evenodd" clip-rule="evenodd" d="M25.875 13.5C25.875 20.3345 20.3345 25.875 13.5 25.875C6.66548 25.875 1.125 20.3345 1.125 13.5C1.125 6.66548 6.66548 1.125 13.5 1.125C20.3345 1.125 25.875 6.66548 25.875 13.5ZM3.375 13.5C3.375 19.0919 7.90812 23.625 13.5 23.625C19.0919 23.625 23.625 19.0919 23.625 13.5C23.625 7.90812 19.0919 3.375 13.5 3.375C7.90812 3.375 3.375 7.90812 3.375 13.5ZM9 7.875C9 6.99138 9.97194 6.45269 10.7212 6.921L19.7212 12.546C20.4263 12.9866 20.4263 14.0134 19.7212 14.454L10.7212 20.079C9.97194 20.5473 9 20.0086 9 19.125V7.875ZM11.25 9.90478L17.0024 13.5L11.25 17.0952V9.90478Z" fill="#FF9A01"/>
-              </g>
-            </svg>
+      <div class="video__wrapper">
+        <div class="video__content">
+          <div class="video__text">
+            <h2 class="video__title">Design for you, by you</h2>
+            <p class="video__desc">
+              Design a fridge that fits your style.
+            </p>
+            <a class="video__btn btn btn--video" target="_blank" href="https://www.youtube.com/watch?v=6cMPSUTKur0">
+              <span>Watch video</span>
+              <svg class="video__icon" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="24 / music / player-play-circle">
+                <path id="icon" fill-rule="evenodd" clip-rule="evenodd" d="M25.875 13.5C25.875 20.3345 20.3345 25.875 13.5 25.875C6.66548 25.875 1.125 20.3345 1.125 13.5C1.125 6.66548 6.66548 1.125 13.5 1.125C20.3345 1.125 25.875 6.66548 25.875 13.5ZM3.375 13.5C3.375 19.0919 7.90812 23.625 13.5 23.625C19.0919 23.625 23.625 19.0919 23.625 13.5C23.625 7.90812 19.0919 3.375 13.5 3.375C7.90812 3.375 3.375 7.90812 3.375 13.5ZM9 7.875C9 6.99138 9.97194 6.45269 10.7212 6.921L19.7212 12.546C20.4263 12.9866 20.4263 14.0134 19.7212 14.454L10.7212 20.079C9.97194 20.5473 9 20.0086 9 19.125V7.875ZM11.25 9.90478L17.0024 13.5L11.25 17.0952V9.90478Z" fill="#FF9A01"/>
+                </g>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="video__thumbnail">
+          <a class="video__link" target="_blank" href="https://www.youtube.com/watch?v=6cMPSUTKur0">
+            <img src="images/thumbnail.png" alt="video-thumbnail" class="video__img">
+            <img src="images/player-play-circle-lg-white.png" alt="play-icon" class="video__play">
           </a>
         </div>
-      </div>
-      <div class="video__thumbnail">
-        <a class="video__link" target="_blank" href="https://www.youtube.com/watch?v=6cMPSUTKur0">
-          <img src="images/thumbnail.png" alt="video-thumbnail" class="video__img">
-          <img src="images/player-play-circle-lg-white.png" alt="play-icon" class="video__play">
-        </a>
       </div>
     </section>
     <!-- ===== pricing ===== -->
@@ -259,6 +263,7 @@
           <div class="faq__accordion">
             <div class="faq__accordion--tab close">
               <div class="faq__accordion--header">
+                <!-- <div class="faq__accordion--icon"></div> -->
                 <h3>Lorem ipsum dolor sit amet?</h3>
               </div>
               <div class="faq__accordion--info">
@@ -298,82 +303,94 @@
         </div>
       </div>
     </section>
+    <!-- ===== contact ===== -->
+    <section class="contact" id="contact">
+      <div class="contact__wrapper">
+        <div class="contact__content">
+          <div class="contact__bg">
+            <h2 class="contact__title title">Contact us</h2>
+            <picture>
+              <source media="(min-width: 969px)" srcset="images/contact-desktop.png">
+              <source media="(max-width: 968px)" srcset="images/contact-mobile.png">
+              <img src="images/contact-desktop.png" alt="contact" class="contact__img">
+            </picture>
+            <div class="contact__card">
+              <img src="images/contact-sales.png" alt="contact-sales" class="contact__card--img">
+              <h3 class="contact__card--header">
+                Get in touch with our sales team 
+              </h3>
+              <p class="contact__card--desc">
+                We’ll help you find the right product and pricing for your business
+              </p>
+              <a href="#" class="contact__btn btn btn--orange">Contact sales</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- ===== reviews ===== -->
     <section class="reviews" id="reviews">
       <div class="reviews__wrapper">
         <h2 class="reviews__title title">Reviews</h2>
-        <div class="reviews__content">
-          <div class="reviews__tab">
-            <div class="reviews__header">
-              <div class="reviews__user">
-                <img src="images/james-avatar.png" alt="james-avatar" class="reviews__user--avatar">
-                <div class="reviews__user--info">
-                  <h3 class="reviews__username">James Lee</h3>
-                  <p class="reviews__userdata">student</p>
+          <div class="reviews__content">
+            <div class="reviews__tab">
+              <div class="reviews__header">
+                <div class="reviews__user">
+                  <img src="images/james-avatar.png" alt="james-avatar" class="reviews__user--avatar">
+                  <div class="reviews__user--info">
+                    <h3 class="reviews__username">James Lee</h3>
+                    <p class="reviews__userdata">student</p>
+                  </div>
                 </div>
               </div>
-              <div class="reviews__ratings">
-                <!-- input stars :) -->
-              </div>
+              <p class="reviews__desc">
+                On this refrigerator, the refrigerator is up top and the freezer is on the bottom. 
+                I love this feature! We use our refrigerator much more than the freezer, so it makes 
+                more sense to have the refrigerator at eye level so it’s easy to grab and see what 
+                you always use.
+              </p>
             </div>
-            <p class="reviews__desc">
-              On this refrigerator, the refrigerator is up top and the freezer is on the bottom. 
-              I love this feature! We use our refrigerator much more than the freezer, so it makes 
-              more sense to have the refrigerator at eye level so it’s easy to grab and see what 
-              you always use.
-            </p>
-          </div>
-          <div class="reviews__tab">
-            <div class="reviews__header">
-              <div class="reviews__user">
-                <img src="images/alyne-avatar.png" alt="alyne-avatar" class="reviews__user--avatar">
-                <div class="reviews__user--info">
-                  <h3 class="reviews__username">Alyne Jones</h3>
-                  <p class="reviews__userdata">designer</p>
+            <div class="reviews__tab">
+              <div class="reviews__header">
+                <div class="reviews__user">
+                  <img src="images/alyne-avatar.png" alt="alyne-avatar" class="reviews__user--avatar">
+                  <div class="reviews__user--info">
+                    <h3 class="reviews__username">Alyne Jones</h3>
+                    <p class="reviews__userdata">designer</p>
+                  </div>
                 </div>
               </div>
-              <div class="reviews__ratings">
-                <!-- input stars :) -->
-              </div>
+              <p class="reviews__desc">
+                I like the idea of changing just the outside of the refrigerator to match with 
+                the current decor of the kitchen. Isn’t it genius that with a renovation, new 
+                panels can be changed out, but the body of the refrigerator stays the same?!
+              </p>
             </div>
-            <p class="reviews__desc">
-              I like the idea of changing just the outside of the refrigerator to match with 
-              the current decor of the kitchen. Isn’t it genius that with a renovation, new 
-              panels can be changed out, but the body of the refrigerator stays the same?!
-            </p>
-          </div>
-          <div class="reviews__tab">
-            <div class="reviews__header">
-              <div class="reviews__user">
-                <img src="images/william-avatar.png" alt="william-avatar" class="reviews__user--avatar">
-                <div class="reviews__user--info">
-                  <h3 class="reviews__username">William Smith</h3>
-                  <p class="reviews__userdata">entreprenuer</p>
+            <div class="reviews__tab">
+              <div class="reviews__header">
+                <div class="reviews__user">
+                  <img src="images/william-avatar.png" alt="william-avatar" class="reviews__user--avatar">
+                  <div class="reviews__user--info">
+                    <h3 class="reviews__username">William Smith</h3>
+                    <p class="reviews__userdata">entreprenuer</p>
+                  </div>
                 </div>
               </div>
-              <div class="reviews__ratings">
-                <!-- input stars :) -->
-              </div>
+              <p class="reviews__desc">
+                The storage is well thought out. It’s easy to find a place for each item and have it conveniently accessible.
+                Also, the capacity inside the fridge is plentiful,
+                it connects via Wi-Fi to the SmartThings app
+                and not to mention, good price for the size, features, and look.
+              </p>
             </div>
-            <p class="reviews__desc">
-              The storage is well thought out. It’s easy to find a place for each item and have it conveniently accessible.
-              Also, the capacity inside the fridge is plentiful,
-              it connects via Wi-Fi to the SmartThings app
-              and not to mention, good price for the size, features, and look.
-            </p>
-          </div>
         </div>
-        <div class="reviews__buttons">
+        <!-- <div class="reviews__buttons">
           <div class="reviews__btn active"></div>
           <div class="reviews__btn"></div>
           <div class="reviews__btn"></div>
-        </div>
+        </div> -->
       </div>
     </section>
-    <!-- ===== contact ===== -->
-    <!-- <section class="contact" id="contact">
-
-    </section> -->
 
     <!-- ===== footer ===== -->
     <footer class="footer">
@@ -463,7 +480,7 @@
                 <a href="#faq" class="footer__link">FAQ</a>
               </li>
               <li class="footer__item"> 
-                <a href="#contact" class="footer__link">Sales/Support</a>
+                <a href="#contact" class="footer__link">Contact</a>
               </li>
               <li class="footer__item">
                 <a href="#reviews" class="footer__link">Reviews</a>
@@ -486,7 +503,7 @@
           </div>
           <div class="grid-col">
             <h3 class="footer__list--title">Newsletter</h3>
-            <form class="footer__form" action="#">
+            <form class="footer__form" action="#" autocomplete="off">
               <input class="footer__form--input" placeholder=" " type="email" name="email" id="email" required>
               <label class="footer__form--error" for="email">Please check your email again</label>
               <button class="footer__form--btn" type="submit">Subscribe</button>
