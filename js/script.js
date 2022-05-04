@@ -1,11 +1,18 @@
 // ===== menu toggle ===== \\
 const navMenu = document.querySelector('.nav__menu'),
-      navList = document.querySelector('.nav__list');
+      navList = document.querySelector('.nav__list'),
+      navLinks = document.querySelectorAll('.nav__link');
 
 navMenu.addEventListener('click', () => {
   navMenu.classList.toggle('active');
   navList.classList.toggle('active');
 })
+
+// ===== remove menu uponing clicking links ===== \\
+navLinks.forEach(n => n.addEventListener('click', () => {
+  navMenu.classList.remove('active');
+  navList.classList.remove('active');
+}))
 
 
 // ===== accordion ===== \\
