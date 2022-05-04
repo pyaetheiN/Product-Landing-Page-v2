@@ -58,7 +58,6 @@ html {
 body {
   font-size: 16px;
   font-family: 'Poppins', sans-serif;
-  overflow-x: hidden;
 }
 
 @media screen and (max-width: 500px) {
@@ -77,6 +76,10 @@ ul {
 
 img {
   max-width: 100%;
+}
+
+main {
+  overflow-x: hidden;
 }
 
 .logo {
@@ -138,15 +141,14 @@ img {
 }
 
 .nav__list.active {
-  opacity: 1;
+  right: 0%;
 }
 
 @media screen and (max-width: 898px) {
   .nav__list {
     position: absolute;
     top: 0;
-    right: 0;
-    opacity: 0;
+    right: -100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -264,6 +266,8 @@ img {
 @media screen and (max-width: 500px) {
   .home__desc {
     font-size: 0.8125em;
+    -webkit-backdrop-filter: blur(0);
+            backdrop-filter: blur(0);
   }
 }
 
@@ -462,26 +466,25 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    max-width: 45.3125rem;
+    margin: 0 auto;
   }
 }
 
 .video__thumbnail {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  -ms-flex-preferred-size: 50vw;
+      flex-basis: 50vw;
   position: relative;
-}
-
-@media screen and (max-width: 968px) {
-  .video__thumbnail {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
 }
 
 .video__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.video__img {
+  width: 100%;
 }
 
 .video__play {
@@ -828,7 +831,8 @@ img {
 @media screen and (max-width: 968px) {
   .contact__bg {
     height: 40.625rem;
-    border-radius: 1.25rem 6.25rem 1.25rem 6.25rem;
+    border-radius: 0.625rem 4.375rem 0.625rem 4.375rem;
+    overflow: hidden;
   }
 }
 
@@ -861,6 +865,7 @@ img {
 @media screen and (max-width: 500px) {
   .contact__title {
     min-width: 12.5rem;
+    top: 4.375rem;
   }
 }
 

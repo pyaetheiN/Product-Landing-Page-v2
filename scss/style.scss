@@ -14,7 +14,6 @@ html{
 body{
   font-size: 16px;
   font-family: 'Poppins', sans-serif;
-  overflow-x: hidden;
 
   @include sm-max{
     font-size: 14px;
@@ -31,6 +30,11 @@ ul{
 }
 img{
   max-width: 100%;
+}
+
+// hiding nav-list
+main{
+  overflow-x: hidden;
 }
 
 
@@ -78,13 +82,14 @@ img{
     display: flex;
 
     &.active{
-      opacity: 1;
+      // opacity: 1;
+      right: 0%;
     }
     @include md-max{
       position: absolute;
       top: 0;
-      right: 0;
-      opacity: 0;
+      right: -100%;
+      // opacity: 0;
       flex-direction: column;
       background-color: $navbar;
       min-height: 100vh;
@@ -160,7 +165,7 @@ img{
     font-size: 2.5em;
     font-weight: 500;
     transform: translateY(-15px);
-    line-height: 1;
+    line-height: 1; // fixing gap
 
     @include sm-max{
       font-size: 2em;
@@ -175,6 +180,7 @@ img{
 
     @include sm-max{
       font-size: 0.8125em;
+      backdrop-filter: blur(0);
     }
   }
   &__buttons{
@@ -303,18 +309,19 @@ img{
 
     @include lg-max{
       flex-direction: column;
+      max-width: rem(725);
+      margin: 0 auto;
     }
   }
   &__thumbnail{
-    flex-basis: 50%;
+    flex-basis: 50vw;
     position: relative;
-
-    @include lg-max{
-      transform: scale(1.1);
-    }
   }
   &__link{
     display: flex; // covering space up
+  }
+  &__img{
+    width: 100%;
   }
   &__play{
     position: absolute;
@@ -581,7 +588,8 @@ img{
 
     @include lg-max{
       height: rem(650);
-      border-radius: rem(20) rem(100) rem(20) rem(100);
+      border-radius: rem(10) rem(70) rem(10) rem(70);
+      overflow: hidden;
     }
     @include sm-max{
       max-width: rem(350);
@@ -604,6 +612,7 @@ img{
     }
     @include sm-max{
       min-width: rem(200);
+      top: rem(70);
     }
   }
   &__img{
