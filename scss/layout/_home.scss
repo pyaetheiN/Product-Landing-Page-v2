@@ -68,11 +68,9 @@
     display: flex;
     column-gap: 1.5rem;
 
-    @include lg-max{
-      justify-content: center;
-    }
     @include sm-max{
       font-size: 0.8125em;
+      justify-content: center;
     }
   }
 }

@@ -44,6 +44,12 @@
   }
 }
 
+@mixin features-max {
+  @media screen and (max-width: $screen-features-max) {
+    @content;
+  }
+}
+
 @mixin sm-max {
   @media screen and (max-width: $screen-sm-max) {
     @content;
