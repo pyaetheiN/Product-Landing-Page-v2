@@ -1,0 +1,96 @@
+@use "../abstracts" as *;
+
+// ===== pricing ===== \\
+.pricing{
+  background-color: $pricing;
+
+  &__wrapper{
+
+    @include sectionWrapper();
+    @include sectionPadding();
+  }
+  &__content{
+
+    @include contentMargin();
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 4rem;
+
+    @include md-max{
+      flex-direction: column;
+    }
+  }
+  &__img{
+
+    @include lg-max{
+      width: rem(500);
+    }
+  }
+  &__text{
+
+    @include xl-max{
+      max-width: rem(400);
+    }
+    @include lg-max{
+      max-width: rem(300);
+    }
+    @include md-max{
+      max-width: 100%;
+      margin-top: 2.5rem;
+    }
+  }
+  &__category{
+
+    &--title{
+      font-size: 1.5em;
+      color: $darkblue;
+
+      @include md-max{
+        text-align: center;
+      }
+    }
+
+    @include lg-max{
+      &:nth-of-type(1) .pricing__tabs{
+        margin-bottom: 2rem;
+      }
+    }
+  }
+  &__tabs{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid $divider;
+
+    @include md-max{
+      justify-content: center;
+    }
+  }
+  &__tab{
+    background-color: $white;
+    border: 1px solid $pricingbr;
+    border-radius: rem(10);
+    min-width: rem(150);
+    padding: 0.7em 1.5em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.2rem;
+    align-items: center;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover{
+      border: 1px solid $black;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    @include lg-max {
+      flex-basis: 100%;
+    }
+    @include md-max{
+      flex-basis: initial;
+    }
+  }
+}

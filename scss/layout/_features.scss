@@ -1,0 +1,136 @@
+@use '../abstracts' as *;
+
+// ===== features ===== \\
+.features{
+  background-color: $features;
+  min-height: 100vh;
+  pointer-events: none;
+
+  &__wrapper{
+    @include sectionWrapper();
+    @include sectionPadding(); // override
+  }
+  &__content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 1.5rem;
+    place-items: center;
+    @include contentMargin();
+
+    // animation
+    @keyframes featuresEntrance {
+      from {
+        opacity: 0;
+        transform: scale(0.3);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @include lg-max{
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include md-max{
+      grid-template-columns: 1fr;
+    }
+  }
+  &__item{
+    animation: featuresEntrance 0.7s ease-out;
+    animation-fill-mode: backwards;
+    --stagger-delay: 0.1s;
+
+    &:nth-of-type(1){
+      animation-delay: calc(1 * var(--stagger-delay));
+    }
+    &:nth-of-type(2){
+      animation-delay: calc(2 * var(--stagger-delay));
+    }
+    &:nth-of-type(3){
+      animation-delay: calc(3 * var(--stagger-delay));
+    }
+    &:nth-of-type(4){
+      animation-delay: calc(4 * var(--stagger-delay));
+    }
+    &:nth-of-type(5){
+      grid-column: 2;
+      grid-row: 2 / 4;
+      animation-delay: calc(5 * var(--stagger-delay));
+    }
+    &:nth-of-type(6){
+      animation-delay: calc(6 * var(--stagger-delay));
+    }
+    &:nth-of-type(7){
+      animation-delay: calc(7 * var(--stagger-delay));
+    }
+    &:nth-of-type(8){
+      grid-column: 3;
+      animation-delay: calc(8 * var(--stagger-delay));
+    }
+    @include lg-max{
+
+      &:nth-of-type(5){
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+        order: 1;
+      }
+      &:nth-of-type(8){
+        grid-column: 1;
+      }
+    }
+    @include md-max{
+      &:nth-of-type(5){
+        grid-column: 1;
+        grid-row: 1 / 3;
+        order: 1;
+      }
+    }
+    &:not(:nth-child(5)){
+      background-color: $featureitem;
+      /* min 310px , preferred 330px,  max 350 */
+      width: clamp(rem(300), 30vw, rem(350));
+      height: rem(140);
+      border: 1px solid $featureitembr;
+      border-radius: rem(15);
+      padding: 1em;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include lg-max{
+        min-width: rem(400);
+      }
+      @include md-max{
+        min-width: rem(290);
+      }
+    }
+    &--title{
+      color: $darkblue;
+      font-size: 1.3em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 0.3em;
+      margin-bottom: 0.5em;
+    }
+    &--icon{
+      width: rem(25);
+    }
+    &:nth-child(1) &--icon{
+      transform: translateY(-2px);
+    }
+    &--desc{
+      font-size: 0.8125em;
+      line-height: 1.6;
+    }
+    &--img{
+      transform: scale(1.25);
+
+      @include lg-max{
+        transform: scale(1.1);
+      }
+    }
+  }
+}

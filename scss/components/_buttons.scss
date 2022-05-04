@@ -1,0 +1,14 @@
+@use '../abstracts' as *;
+
+.btn{
+  display: inline-block;
+  color: $white;
+  padding: rem(10) rem(20) rem(11);
+  border-radius: 2rem;
+  transition: 0.3s;
+  
+  &:hover{
+    transform: scale(1.08);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+  }
+}

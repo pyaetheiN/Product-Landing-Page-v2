@@ -1,0 +1,112 @@
+@use '../abstracts' as *;
+
+// ===== contact ===== \\
+.contact{
+  background-color: $contact;
+
+  &__wrapper{
+    @include sectionWrapper();
+    @include sectionPadding();
+  }
+  &__bg{
+    background-color: $contactbg;
+    max-width: rem(450);
+    height: rem(450);
+    border-radius: rem(10) rem(50) rem(10) rem(50);
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+
+    @include lg-max{
+      height: rem(650);
+      border-radius: rem(10) rem(70) rem(10) rem(70);
+      overflow: hidden;
+    }
+    @include sm-max{
+      max-width: rem(350);
+      height: rem(500);
+    }
+  }
+  &__title{
+    color: $white;
+    font-weight: 500;
+    position: absolute;
+    top: rem(20);
+    right: rem(25);
+
+    @include lg-max{
+      z-index: 5;
+      top: rem(90);
+      right: 50%;
+      transform: translateX(50%);
+      text-shadow: 0 5px 20px rgba(0,0,0,0.8);
+    }
+    @include sm-max{
+      min-width: rem(200);
+      top: rem(70);
+    }
+  }
+  &__img{
+    width: rem(350);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: rem(-175);
+    transform: translateY(-50%);
+
+    @include lg-max{
+      border-radius: 0;
+      width: 100%;
+      top: 0;
+      left: 0;
+      transform: translateY(0%);
+    }
+  }
+  &__card{
+    position: absolute;
+    top: 50%;
+    right: rem(-222);
+    transform: translateY(-50%);
+    background-color: $white;
+    border-radius: rem(10);
+    text-align: center;
+    padding: 1em 1.5em;
+
+    @include lg-max{
+      right: 0;
+      min-width: rem(300);
+      top: 46%;
+      right: 50%;
+      transform: translateX(50%);
+    }
+    @include sm-max{
+      min-width: rem(250);
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, -80%);
+    }
+
+    &--img{
+      border-radius: 50%;
+    }
+    &--header{
+      font-size: 1.5em;
+      font-weight: 600;
+
+      @include sm-max{
+        font-size: 1.2em;
+      }
+    }
+    &--desc{
+      font-size: 0.75em;
+      
+      @include lg-max{
+        margin-top: 0.5rem;
+      }
+    }
+  }
+  &__btn{
+    margin-top: 1rem;
+    font-size: 0.8125em;
+  }
+}

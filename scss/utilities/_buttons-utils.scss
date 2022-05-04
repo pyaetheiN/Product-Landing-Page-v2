@@ -1,0 +1,18 @@
+@use '../abstracts' as *;
+
+// buttons
+.btn{
+
+  &--orange{
+    background-color: $orange;
+  }
+  &--video{
+    background-color: $white;
+    color: $orange;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    margin-top: 1rem;
+  }
+}
