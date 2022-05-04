@@ -113,14 +113,16 @@ img {
   width: 2.1875rem;
   height: 2.1875rem;
   padding-right: 0.5rem;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
 }
 
 .nav__menu.active {
   background-image: url("../images/24/basic/plus.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  width: 2.1875rem;
+  height: 2.1875rem;
 }
 
 @media screen and (max-width: 898px) {
@@ -438,6 +440,7 @@ img {
 
 .video {
   min-height: calc(100vh - 450px);
+  overflow: hidden;
 }
 
 .video__wrapper {
@@ -778,7 +781,7 @@ img {
 }
 
 .faq__accordion--info {
-  overflow-y: hidden;
+  overflow-y: auto;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 }
@@ -831,6 +834,7 @@ img {
 
 @media screen and (max-width: 500px) {
   .contact__bg {
+    max-width: 21.875rem;
     height: 31.25rem;
   }
 }

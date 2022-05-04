@@ -60,11 +60,14 @@ img{
     width: rem(35);
     height: rem(35);
     padding-right: 0.5rem;
-    transition: 0.3s ease;
 
     &.active{
       background-image: url("../images/24/basic/plus.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
       transform: rotate(45deg);
+      width: rem(35);
+      height: rem(35);
     }
 
     @include md-max{
@@ -290,6 +293,7 @@ img{
 // ===== video ===== \\
 .video{
   min-height: calc(100vh - 450px);
+  overflow: hidden; //*
 
   &__wrapper{
     background-color: $orange;
@@ -491,7 +495,6 @@ img{
       background-color: $white;
       border-radius: rem(10);
       padding: 1em 1.5em;
-      // max-width: rem(500);
       max-width: 80%;
       margin: 0 auto;
       border-left: 5px solid rgba(0,0,0,0.5);
@@ -529,7 +532,7 @@ img{
       }
     }
     &--info{
-      overflow-y: hidden;
+      overflow-y: auto;
       transition: 0.5s ease-in-out;
 
       p{
@@ -581,6 +584,7 @@ img{
       border-radius: rem(20) rem(100) rem(20) rem(100);
     }
     @include sm-max{
+      max-width: rem(350);
       height: rem(500);
     }
   }
