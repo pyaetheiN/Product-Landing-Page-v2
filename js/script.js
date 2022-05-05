@@ -8,6 +8,7 @@ navMenu.addEventListener('click', () => {
   navList.classList.toggle('active');
 })
 
+
 // ===== remove menu uponing clicking links ===== \\
 navLinks.forEach(n => n.addEventListener('click', () => {
   navMenu.classList.remove('active');
@@ -34,44 +35,15 @@ accordionHeaders.forEach(n => n.addEventListener('click', function() {
 }));
 
 
-// ===== slider ===== \\
-const reviewNav = document.querySelector('.reviews__buttons'),
-      reviewBtns = document.querySelectorAll('.reviews__btn'),
-      reviewSlider = document.querySelector('.reviews__content');
-
-// reviewBtns[0].onclick = function(){
-//   reviewSlider.style.transform = 'translateX(0)';
-//   for(i = 0; i < reviewBtns.length; i++){
-//     reviewBtns[i].classList.remove('active');
-//   }
-//   this.classList.add('active');
-// }
-
-// reviewBtns[1].onclick = function(){
-//   reviewSlider.style.transform = 'translateX(-100%)';
-//   for(i = 0; i < reviewBtns.length; i++){
-//     reviewBtns[i].classList.remove('active');
-//   }
-//   this.classList.add('active');
-// }
-
-// reviewBtns[2].onclick = function(){
-//   reviewSlider.style.transform = 'translateX(-220%)';
-//   for(i = 0; i < reviewBtns.length; i++){
-//     reviewBtns[i].classList.remove('active');
-//   }
-//   this.classList.add('active');
-// }
-
-
 // ===== touch slider ===== \\
-const reviewTabs = document.querySelectorAll('.reviews__tab');
+const reviewSlider = document.querySelector('.reviews__content'),
+      reviewTabs = document.querySelectorAll('.reviews__tab');
 
 let isDragging = false,
-currentIndex,
-currentTranslate,
-prevTranslate,
-animationID,
+currentIndex = 0,
+currentTranslate = 0,
+prevTranslate = 0,
+animationID, // undefined
 startPos = 0;
 
 reviewTabs.forEach((reviewTab, index) => {
@@ -115,7 +87,7 @@ function touchEnd(){
   if(movedBy < -100 && currentIndex < reviewTabs.length - 1){
     currentIndex += 1
   }
-  if(movedBy > 100 && currentIndex > 0){
+  if(movedBy > 0 && currentIndex > 0){
     currentIndex -= 1
   }
 
