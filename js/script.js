@@ -21,9 +21,12 @@ const accordionHeaders = document.querySelectorAll('.faq__accordion--header'),
       accordionTabs = document.querySelectorAll('.faq__accordion--tab');
 
 
-// an arrow function does not have its own this, resulting in eror
+// an arrow function does not have its own this, resulting in an error
 accordionHeaders.forEach(n => n.addEventListener('click', function() {
-  let itemClass = this.parentNode.className;
+  let itemClass = this.parentNode.className; // this referring to n
+
+  // console.log(itemClass);
+  // e.target would be too troublesome...
 
   for (i = 0; i < accordionTabs.length; i++) {
     accordionTabs[i].className = 'faq__accordion--tab close';
